@@ -23,10 +23,10 @@ router.get('/:id', function (req, res, next) {
   });
 });
 
-// GET Vendors listing
+// GET Vendors products
 router.get('/:id/products', function (req, res, next) {
   let id = req.params.id;
-  let query = `SELECT * FROM vendor_products WHERE vendor_id = "${id}"`;
+  let query = `SELECT * FROM vendor_products WHERE vendor_id = "${id}" AND deleted_at IS NULL`;
   connection.query(query, function (err, result, fields) {
     if (err) throw err;
     response(res, 200, 'Berhasil Mendapatkan Vendor Product', result);
@@ -94,6 +94,74 @@ router.delete('/:id', function (req, res, next) {
     connection.query(query, function (err, result, fields) {
       if (err) throw err;
       return response(res, 200, 'Berhasil Menghapus Vendor');
+    });
+  } catch (err) {
+    return response(res, 400, err);
+  }
+
+});
+
+// add product vendors data
+router.post('/:id/products/store', function (req, res, next) {
+  let id = req.params.id;
+  let name = req.body.name;
+  let type = req.body.type;
+  let price = req.body.price;
+  let description = req.body.description;
+  if (name == undefined || type == undefined || price == undefined || description == undefined) {
+    return response(res, 400, 'Ada data belum diisi');
+  }
+
+  let today = new Date().toISOString().slice(0, 18);
+  let query = `INSERT INTO vendor_products VALUES(NULL,"${id}","${name}","${type}","${price}","${description  }","${today}",NULL,NULL)`;
+
+  try {
+    connection.query(query, function (err, result, fields) {
+      if (err) throw err;
+      return response(res, 200, 'Berhasil Menambahkan Vendor Product', req.body);
+    });
+  } catch (err) {
+    return response(res, 400, err);
+  }
+
+});
+
+// update vendors data
+router.put('/:id/products/:product', function (req, res, next) {
+  let id = req.params.product;
+  let vendor_id = req.params.id;
+  let name = req.body.name;
+  let type = req.body.type;
+  let price = req.body.price;
+  let description = req.body.description;
+  if (name == undefined || type == undefined || price == undefined || description == undefined) {
+    return response(res, 400, 'Ada data belum diisi');
+  }
+
+  let today = new Date().toISOString().slice(0, 18);
+  let query = `UPDATE vendor_products SET name="${name}", type="${type}", price="${price}", description="${description}", updated_at="${today}" WHERE id = "${id}"`;
+
+  try {
+    connection.query(query, function (err, result, fields) {
+      if (err) throw err;
+      return response(res, 200, 'Berhasil Mendapatkan Mengubah Vendor Product', req.body);
+    });
+  } catch (err) {
+    return response(res, 400, err);
+  }
+
+});
+
+// soft delete vendors data
+router.delete('/:id/products/:product', function (req, res, next) {
+  let id = req.params.product;
+  let today = new Date().toISOString().slice(0, 18);
+  let query = `UPDATE vendor_products SET deleted_at="${today}" WHERE id = "${id}"`;
+
+  try {
+    connection.query(query, function (err, result, fields) {
+      if (err) throw err;
+      return response(res, 200, 'Berhasil Menghapus Vendor Product');
     });
   } catch (err) {
     return response(res, 400, err);
