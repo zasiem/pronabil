@@ -22,4 +22,21 @@ router.get('/history', function(req, res, next){
     });
   });
 
+  // GET by Code transactions
+router.get('/transactions/:code', function(req, res, next){
+  let query ="SELECT * FROM transactions WHERE code = ? ";
+  connection.query(query, function (err, result, fields) {
+    if (err) throw err;
+    response(res, 200, 'Berhasil Mendapatkan Code Transactions', result);
+  });
+});
+  // GET by Date transactions
+router.get('/transactions/:date', function(req, res, next){
+  let query ="SELECT * FROM transactions WHERE created_at = ?";
+  connection.query(query, function (err, result, fields) {
+    if (err) throw err;
+    response(res, 200, 'Berhasil Mendapatkan Date Transactions', result);
+  });
+});
+
 module.exports = router;
