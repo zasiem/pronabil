@@ -1,3 +1,10 @@
+<?php 
+
+include 'connection.php';
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -17,3 +24,5 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand font-weight-bold" href="index.php">Pronabil</a>
 </nav>
+
+<div class="container" style="min-height: 85vh;">
