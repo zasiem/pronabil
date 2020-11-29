@@ -14,9 +14,9 @@ $result = mysqli_query($con, $query);
             <form action="good_receipt_process.php" method="post">
                 <div class="form-group">
                     <label for="">Code Barang</label>
-                    <select name="good_name" class="form-control">
+                    <select name="transaction_detail" class="form-control">
                         <?php while ($transaction = mysqli_fetch_assoc($result)) : ?>
-                            <option value="<?= $transaction['barang_id'] ?>"><?= $transaction['transaction_code'] . " - " . $transaction['barang_id'] ?></option>
+                            <option value="<?= $transaction['id'] ?>"><?= $transaction['transaction_code'] . " - " . $transaction['barang_id'] ?></option>
                         <?php endwhile; ?>
                     </select>
                 </div>

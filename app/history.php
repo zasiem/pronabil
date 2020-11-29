@@ -29,7 +29,7 @@ if (mysqli_connect_errno()) {
     <td>Updated by</td>
 </tr>
 <?php
-$ambildata = mysqli_query($con, "SELECT *FROM transactions"); //gaada koneksi ke database, pake MySQLi, pake assoc, 
+$ambildata = mysqli_query($con, "SELECT * FROM transactions WHERE status='arrived' OR status='paid'"); //gaada koneksi ke database, pake MySQLi, pake assoc, 
 while ($data = mysqli_fetch_assoc($ambildata)) {
 ?>
 <tr>
