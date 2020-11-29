@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
 ?>
 <html>
 <h2 style="text-align:center;">Data Product Vendor</h2>
+<center><a href="createproduct.php" class="btn btn-primary">Create</a></center>
 <br>
 <div style="margin:auto;">
     <table class="table table-striped">

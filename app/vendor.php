@@ -11,7 +11,9 @@ if (mysqli_connect_errno()) {
 }
 ?>
 <html>
-<h2 style="text-align:center;">Data Vendor</h2>
+<h2 style="text-align:center;">Data Vendor </h2>
+ <center><a href="createvendor.php" class="btn btn-primary">Create</a></center>
+
 <br>
 <div style="margin:auto;">
     <table class="table table-striped">
@@ -67,7 +69,7 @@ while ($data = mysqli_fetch_array($ambildata)) {
     <?php
     echo "</td>";
     echo "</tr>";
-
+ 
 }
 ?>
  </tbody>
