@@ -6,6 +6,7 @@
     <a href="vendor.php" class="btn btn-light w-50 my-2">Data Vendor</a>
     <a href="transaksi.php" class="btn btn-light w-50 my-2">Transaksi</a>
     <a href="history.php" class="btn btn-light w-50 my-2">History Transaksi</a>
+    <a href="good_receipt.php" class="btn btn-light w-50 my-2">Pelaporan GR</a>
     <a href="logout.php" class="btn btn-danger w-50 my-2">Logout</a>
 </div>
 <!-- ngoding diatas sini -->
