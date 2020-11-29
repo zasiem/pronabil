@@ -1,6 +1,7 @@
 <?php 
 
 include 'connection.php';
+include 'api_consumer.php';
 session_start();
 
 ?>
