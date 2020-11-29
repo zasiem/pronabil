@@ -102,7 +102,9 @@ router.post('/request-order', function (req, res, next) {
         const query = `INSERT INTO transactions_detail (id, transaction_code, barang_id, quantity, status) VALUES(NULL, "${code}", "${id}", "${quantity[index]}", "request")`;
         queryScript(query);
       });
-      return response(res, 201, 'Berhasil membuat request order');
+      return response(res, 201, 'Berhasil membuat request order', {
+        'transaction_code': code
+      });
     })
     .catch(error => {
       console.log(error);

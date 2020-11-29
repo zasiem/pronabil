@@ -2,16 +2,20 @@
 <?php
 $con = mysqli_connect($serviceName,$user,$password,$database);
 
-// Check connection
+// Check connection  
+
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   exit();
 }
 ?>
-<html>
-<label>History Transaksi</label>
 <br>
-<table border="1" cellspacing="3">
+<div class="card">
+<div class="card-header bg-primary text-white">
+      History transaksi
+</div>
+<div class="card-body">
+<table class="table table-bordered table-striped" border="1" cellspacing="3">
 <tr>
     <td>Id</td>
     <td>Code</td>
@@ -25,8 +29,8 @@ if (mysqli_connect_errno()) {
     <td>Updated by</td>
 </tr>
 <?php
-$ambildata = mysql_query("SELECT *FROM transactions");
-while ($data = mysql_fetch_array($ambildata)) {
+$ambildata = mysqli_query($con, "SELECT *FROM transactions"); //gaada koneksi ke database, pake MySQLi, pake assoc, 
+while ($data = mysqli_fetch_assoc($ambildata)) {
 ?>
 <tr>
     <td><?php echo $data['id']; ?></td>
@@ -39,6 +43,7 @@ while ($data = mysql_fetch_array($ambildata)) {
     <td><?php echo $data['updated_at']; ?></td>
     <td><?php echo $data['created_by']; ?></td>
     <td><?php echo $data['updated_by']; ?></td>
+
 </tr>
 <?php
 }
