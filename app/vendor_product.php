@@ -11,22 +11,21 @@ if (mysqli_connect_errno()) {
 }
 ?>
 <html>
-<h2 style="text-align:center;">Data Vendor</h2>
+<h2 style="text-align:center;">Data Product Vendor</h2>
 <br>
 <div style="margin:auto;">
     <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Address</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Email</th>
+      <th scope="col">Nama Vendor</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Tipe</th>
+      <th scope="col">Harga</th>
+      <th scope="col">Deskripsi</th>
       <th scope="col">Created At</th>
       <th scope="col">Updated At</th>
       <th scope="col">Deleted At</th>
-      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
