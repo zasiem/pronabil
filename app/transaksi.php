@@ -9,15 +9,15 @@
   <div class="card-body">
       
    <table class="table table-bordered table-striped">
-   <tr>
+   <tr style="text-align: center">
           <th>id</th>
           <th>Kode</th>
           <th>Nama</th>
           <th>Deskripsi</th>
           <th>Jumlah</th>
           <th>Status</th>
-          <th>Tanggal transaksi</th>
-          <th>Update tanggal transaksi</th>
+          <th>Transaksi</th>
+          <th>Update tanggal</th>
           <th>Dibuat oleh</th>
           <th>Diperbarui oleh</th>
           <th>Action</th>
@@ -40,7 +40,9 @@
           <td><?=$data['created_by']?></td>
           <td><?=$data['updated_by']?></td>
           <td>
-            <a href="kirim" class="btn btn-warning" name="bkirim" style="width: 65px">Kirim</a>
+            <?php
+            echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning" name="bkirim" style="width: 65px">Kirim</a>'
+            ?>
             <br>
             <br>
             <a href="beli" class="btn btn-danger" name="b"style="width: 65px">Beli</a>
