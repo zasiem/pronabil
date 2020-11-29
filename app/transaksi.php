@@ -6,8 +6,11 @@
   <div class="card-header bg-primary text-white">
       Transaksi
   </div>
+
+  <form action="beli.php" method="POST">
+
   <div class="card-body">
-      
+
    <table class="table table-bordered table-striped">
    <tr style="text-align: center">
           <th>id</th>
@@ -29,7 +32,7 @@
    ?>
 
   <tr>
-          <td><?=$data['id']?></td>
+          <td><?=$data['id']?> </td>
           <td><?=$data['code']?></td>
           <td><?=$data['name']?></td>
           <td><?=$data['description']?></td>
@@ -40,6 +43,7 @@
           <td><?=$data['created_by']?></td>
           <td><?=$data['updated_by']?></td>
           <td>
+
             <?php
             echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning" name="bkirim" style="width: 65px">Kirim</a>'
             ?>
@@ -51,8 +55,11 @@
       <?php endwhile; ?>
         
       </table>
-
+      
       </div>
+
+      </form>
+      
 </div>
 
 <?php include 'partials/footer.php' ?>
