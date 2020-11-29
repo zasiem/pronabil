@@ -40,10 +40,10 @@
           <td><?=$data['created_by']?></td>
           <td><?=$data['updated_by']?></td>
           <td>
-            <a href="kirim" class="btn btn-warning" style="width: 65px">Kirim</a>
+            <a href="kirim" class="btn btn-warning" name="bkirim" style="width: 65px">Kirim</a>
             <br>
             <br>
-            <a href="beli" class="btn btn-danger" style="width: 65px">Beli</a>
+            <a href="beli" class="btn btn-danger" name="b"style="width: 65px">Beli</a>
           </td>
   </tr>
       <?php endwhile; ?>
