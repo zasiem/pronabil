@@ -62,7 +62,7 @@ while ($data = mysqli_fetch_array($ambildata)) {
     echo $data['deleted_at'];
     echo "</td>";
     echo "<td>"; ?>
-    <a href="" class="btn btn-primary">Product</a>
+    <a href="<?php echo "vendor_product.php?id=".$data['id']; ?>" class="btn btn-primary">Product</a>
    <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
     <?php
     echo "</td>";

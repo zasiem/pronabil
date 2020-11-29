@@ -18,11 +18,9 @@ if (mysqli_connect_errno()) {
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Nama Vendor</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Tipe</th>
+      <th scope="col">Vendor ID</th>
+      <th scope="col">Barang ID</th>
       <th scope="col">Harga</th>
-      <th scope="col">Deskripsi</th>
       <th scope="col">Created At</th>
       <th scope="col">Updated At</th>
       <th scope="col">Deleted At</th>
@@ -30,26 +28,21 @@ if (mysqli_connect_errno()) {
   </thead>
   <tbody>
 <?php
-$ambildata = mysqli_query($con, "SELECT * FROM vendors");
-while ($data = mysqli_fetch_array($ambildata)) {
+$id = $_GET['id'];
+$ambildata = mysqli_query($con, "SELECT * FROM vendor_products WHERE vendor_id = '$id' ");
+while ($data = mysqli_fetch_assoc($ambildata)) {
     echo "<tr>";
     echo "<td>";
     echo $data['id'];
+    echo "</td>"; 
+    echo "<td>";
+    echo $data['vendor_id'];
     echo "</td>";
     echo "<td>";
-    echo $data['name'];
+    echo $data['barang_id'];
     echo "</td>";
     echo "<td>";
-    echo $data['rating'];
-    echo "</td>";
-    echo "<td>";
-    echo $data['address'];
-    echo "</td>";
-    echo "<td>";
-    echo $data['phone'];
-    echo "</td>";
-    echo "<td>";
-    echo $data['email'];
+    echo $data['price'];
     echo "</td>";
     echo "<td>";
     echo $data['created_at'];
@@ -59,11 +52,6 @@ while ($data = mysqli_fetch_array($ambildata)) {
     echo "</td>";
     echo "<td>";
     echo $data['deleted_at'];
-    echo "</td>";
-    echo "<td>"; ?>
-    <a href="" class="btn btn-primary">Product</a>
-   <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
-    <?php
     echo "</td>";
     echo "</tr>";
 
