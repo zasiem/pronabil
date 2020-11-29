@@ -45,11 +45,13 @@
           <td>
 
             <?php
-            echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning" name="bkirim" style="width: 65px">Kirim</a>'
+            echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning text-white" name="bkirim" style="width: 65px">Kirim</a>'
             ?>
             <br>
             <br>
-            <a href="beli" class="btn btn-danger" name="b"style="width: 65px">Beli</a>
+            <?php
+            echo '<a href="beli.php?code='. $data['code'] .'" class="btn btn-danger text-white" name="bbeli" style="width: 65px">Beli</a>'
+            ?>
           </td>
   </tr>
       <?php endwhile; ?>
