@@ -1,15 +1,6 @@
 <?php include 'partials/header.php' ?>
 
 <!-- ngoding dibawah sini -->
-<?php
-$con = mysqli_connect($serviceName,$user,$password,$database);
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit();
-}
-?>
 <html>
 <h2 style="text-align:center;">Data Product Vendor</h2>
 <center><a href="createproduct.php" class="btn btn-primary">Create</a></center>
