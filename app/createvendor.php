@@ -44,8 +44,8 @@
                 <tr height="46">
                     <td> </td>
                     <td> </td>
-                    <td><input class="btn btn-warning text-white" type="submit" name="Submit" value="Submit">
-                        <input class="btn btn-danger text-white" type="reset" name="reset" value="Cancel"></td>
+                    <td><input class="btn btn-primary text-white" type="submit" name="Submit" value="Submit">
+                        <input class="btn btn-warning text-white" type="reset" name="reset" value="Cancel"></td>
 
                 </tr>
             </table>

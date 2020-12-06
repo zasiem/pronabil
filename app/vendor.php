@@ -64,11 +64,11 @@ while ($data = mysqli_fetch_array($ambildata)) {
     echo $data['deleted_at'];
     echo "</td>";
     echo "<td>"; ?>
-    <a href="<?php echo "vendor_product.php?id=".$data['id']; ?>" class="btn btn-primary">Product</a>
+    <a href="<?php echo "vendor_product.php?id=".$data['id']; ?>" class="btn btn-primary" style="width: 85px">Product</a>
    <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
    <br>
    <br>
-   <a href="<?php echo "update_vendor.php?id=".$data['id']; ?>" class="btn btn-warning">Update</a>
+   <a href="<?php echo "update_vendor.php?id=".$data['id']; ?>" class="btn btn-warning" style="width: 85px">Update</a>
     <?php
     echo "</td>";
     echo "</tr>";

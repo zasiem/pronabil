@@ -56,7 +56,7 @@ $update=mysqli_query($con, $query);
                     <td> </td>
                     <td>
                     	<input type="hidden" name="id" value="<?php echo $data ['id'] ?>">
-                    	<input class="btn btn-warning text-white" type="submit" name="Submit" value="Update">
+                    	<input class="btn btn-primary text-white" type="submit" name="Submit" value="Update">
                     </td>
 
                 </tr>
