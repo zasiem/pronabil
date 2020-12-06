@@ -48,11 +48,12 @@ while ($data = mysqli_fetch_assoc($ambildata)) {
     echo "</td>";
     echo "<td>"; ?>
     <a href="<?php echo "vendor_product_delete.php?id=".$data['id']; ?>" class="btn btn-danger">Delete</a>
+    <a href="" class="btn btn-warning text-white">Update</a>
    <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
     <?php
+
     echo "</td>";
     echo "</tr>";
-
 }
 ?>
  </tbody>
