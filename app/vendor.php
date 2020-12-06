@@ -66,6 +66,9 @@ while ($data = mysqli_fetch_array($ambildata)) {
     echo "<td>"; ?>
     <a href="<?php echo "vendor_product.php?id=".$data['id']; ?>" class="btn btn-primary">Product</a>
    <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
+   <br>
+   <br>
+   <a href="<?php echo "update_vendor.php?id=".$data['id']; ?>" class="btn btn-warning">Update</a>
     <?php
     echo "</td>";
     echo "</tr>";
