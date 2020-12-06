@@ -16,6 +16,7 @@
       <th scope="col">Created At</th>
       <th scope="col">Updated At</th>
       <th scope="col">Deleted At</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -45,8 +46,11 @@ while ($data = mysqli_fetch_assoc($ambildata)) {
     echo "<td>";
     echo $data['deleted_at'];
     echo "</td>";
+    echo "<td>";
+    echo "<a class='btn btn-danger text-white' href='vendor_product_delete.php'>Delete</a>";
+    echo "<a class='btn btn-warning text-white' href='vendor_product_update.php'>Update</a>";
+    echo "</td>";
     echo "</tr>";
-
 }
 ?>
  </tbody>
