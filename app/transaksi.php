@@ -50,7 +50,7 @@
             <br>
             <br>
             <?php
-            echo '<a href="beli.php?code='. $data['code'] .'" class="btn btn-danger text-white" name="bbeli" style="width: 65px">Beli</a>'
+            echo '<a href="beli.php?code='. $data['code'] .'" class="btn btn-primary text-white" name="bbeli" style="width: 65px">Beli</a>'
             ?>
           </td>
   </tr>
