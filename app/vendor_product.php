@@ -21,8 +21,7 @@
   </thead>
   <tbody>
 <?php
-$id = $_GET['id'];
-$ambildata = mysqli_query($con, "SELECT * FROM vendor_products WHERE vendor_id = '$id' ");
+$ambildata = mysqli_query($con, "SELECT * FROM vendor_products");
 while ($data = mysqli_fetch_assoc($ambildata)) {
     echo "<tr>";
     echo "<td>";
@@ -48,7 +47,7 @@ while ($data = mysqli_fetch_assoc($ambildata)) {
     echo "</td>";
     echo "<td>"; ?>
     <a href="<?php echo "vendor_product_delete.php?id=".$data['id']; ?>" class="btn btn-danger">Delete</a>
-    <a href="" class="btn btn-warning text-white">Update</a>
+    <a href="<?php echo "vendor_product_update.php?id=".$data['id']; ?>" class="btn btn-warning">Update</a>
    <!-- <a href='form-edit.php?id_mahasiswa=$row[id_mahasiswa]'>Edit</a> -->
     <?php
 

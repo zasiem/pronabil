@@ -12,8 +12,12 @@ $master = mysqli_fetch_assoc($result_query);
 $barang = consume('https://warehouse-tubeseai.herokuapp.com/barang/' . $master['barang_id']);
 
 $name = $barang[0]['name'];
-$tanggal = $master['updated_at'];
+$tanggal = date("Y-m-d");
 $amount = $master['price'] * $master['quantity'];
+
+$request = compact('name', 'tanggal', 'amount');
+
+$response = post_good_receipt("http://finabil.000webhostapp.com/post-gr.php", $request);
 
 $query = "UPDATE transactions_detail SET status='paid' WHERE id = '$transaction_detail'";
 mysqli_query($con, $query);

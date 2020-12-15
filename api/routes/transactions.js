@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
 
 // GET History transactions
 router.get('/history', function (req, res, next) {
-  let query = "SELECT * FROM transactions WHERE status = 'selesai' order by created_at DESC";
+  let query = "SELECT * FROM transactions WHERE status = 'paid' OR status = 'arrived' order by created_at DESC";
   connection.query(query, function (err, result, fields) {
     if (err) throw err;
     return response(res, 200, 'Berhasil Mendapatkan History Transactions', result);
