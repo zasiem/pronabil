@@ -30,6 +30,7 @@ function post_good_receipt($link, $request)
 
     return $response;
 }
+<<<<<<< HEAD
 
 function post_login ($link, $request)
 {
@@ -49,3 +50,5 @@ function post_login ($link, $request)
 
     return json_decode($response);
 }
+=======
+>>>>>>> 12b82c3f9957c10725e7d65b0a11278883bd18b1
