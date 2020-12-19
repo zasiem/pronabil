@@ -2,53 +2,54 @@
     <br>
     <div class="card">
   <div class="card-header bg-primary text-white">
-      Form data vendor
+      Update data vendor
   </div>
 
   <div class="card-body">
 
-    <div style="border:0; padding:10px; width:760px; height:auto;">
-        <form action="actioninput.php" method="POST" name="form-input-data">
-            <table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
-                <tr height="46">
-                    <td width="10%"> </td>
-                    <td width="25%"> </td>
-                    <td width="65%">                        
-                    </td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td style="font-weight: bold">Name</td>
-                    <td><input type="text" name="name" size="50" maxlength="30" /></td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td style="font-weight: bold">Rating</td>
-                    <td><input type="text" name="rating" size="50" maxlength="30" /></td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td style="font-weight: bold">address</td>
-                    <td><input type="text" name="address" size="50" maxlength="30" /></td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td style="font-weight: bold">phone</td>
-                    <td><input type="text" name="phone" size="20" maxlength="12" /></td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td style="font-weight: bold">email</td>
-                    <td><input type="text" name="email" size="20" maxlength="12" /></td>
-                </tr>
-                <tr height="46">
-                    <td> </td>
-                    <td> </td>
-                    <td><input class="btn btn-primary text-white" type="submit" name="Submit" value="Submit">
-                        <input class="btn btn-warning text-white" type="reset" name="reset" value="Cancel"></td>
+    <!-- form baru -->
+    <form action="actioninput.php" method="POST" name="form-input-data">
+  <div class="form-group">
+    <label for="name">Nama Vendor</label>
+    <input input type="text" name="name" class="form-control" placeholder="PT. Cinta Sejati">
+  </div>
 
-                </tr>
-            </table>
+  <div class="form-group">
+    <label for="rating">Rating</label>
+    <input input type="text" name="rating" class="form-control" placeholder="4">
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input input type="text" name="address" class="form-control" placeholder="Jl. Cinta">
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+       <div> <label for="phone">Phone</label> </div>
+        <input type="text" name="phone" class="form-control" placeholder="0866666">
+    </div>
+    <div class="col">
+        <div> <label for="email">Email</label> </div>
+        <input type="text" name="email" class="form-control" placeholder="haji_lulung@example.com">
+    </div>
+  </div>
+  <br>
+
+
+   <td >
+    <center><input class="btn btn-success ceter-block text-white" type="submit" name="Submit" value="Submit">
+    <input class="btn btn-danger text-white" type="reset" name="reset" value="Cancel"></center>
+ </td>
+
+
+
+    <!-- form baru -->
+
+   
+
+              
         </form>
     </div>
 </div>
