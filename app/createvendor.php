@@ -40,7 +40,7 @@
 
    <td >
     <center><input class="btn btn-success ceter-block text-white" type="submit" name="Submit" value="Submit">
-    <input class="btn btn-danger text-white" type="reset" name="reset" value="Cancel"></center>
+    <a href="vendor.php" class="btn btn-danger">Cancel</a>
  </td>
 
 

@@ -32,9 +32,14 @@ if (mysqli_connect_errno()) {
     </tr>
   </thead>
   <tbody>
-<?php
-$ambildata = mysqli_query($con, "SELECT * FROM vendors");
-while ($data = mysqli_fetch_array($ambildata)) {
+ <?php
+        include "connection.php";
+        $no=0;
+        $ambildata    =mysqli_query($con, "SELECT * FROM vendors ORDER BY id DESC");
+        while($data    =mysqli_fetch_array($ambildata)){
+        $no++  
+  ?>
+  <?php          
     echo "<tr>";
     echo "<td>";
     echo $data['id'];

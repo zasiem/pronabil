@@ -48,6 +48,7 @@ $update=mysqli_query($con, $query);
    <td><center>
         <input type="hidden" name="id" value="<?php echo $data ['id'] ?>" >
         <input class="btn btn-success text-white" type="submit" name="Submit" value="Update">
+        <a href="vendor.php" class="btn btn-danger">Cancel</a>
     </center></td>
 
 

@@ -21,8 +21,15 @@
   </thead>
   <tbody>
 <?php
-$ambildata = mysqli_query($con, "SELECT * FROM vendor_products");
-while ($data = mysqli_fetch_assoc($ambildata)) {
+    if(isset($_GET['id'])){
+        $id =$_GET['id'];
+    }
+    else {
+        die ("Error. No ID Selected!");    
+    }
+    include "connection.php";
+    $ambildata = mysqli_query($con, "SELECT * FROM vendor_products WHERE vendor_id='$id'");
+    while ($data = mysqli_fetch_array($ambildata)) {
     echo "<tr>";
     echo "<td>";
     echo $data['id'];
