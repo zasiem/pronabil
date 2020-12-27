@@ -28,7 +28,7 @@ include './connection.php';
           <th>Deskripsi</th>
           <th>Jumlah</th>
           <th>Status</th>
-          <th>Transaksi</th>
+          <th>Tanggal Dibuat</th>
           <th>Update tanggal</th>
           <th>Dibuat oleh</th>
           <th>Diperbarui oleh</th>
@@ -54,12 +54,12 @@ include './connection.php';
           <td>
 
             <?php
-            echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning text-white" name="bkirim" style="width: 65px">Kirim</a>'
+            echo '<a href="proses-kirim.php?id='. $data['id'] .'" class="btn btn-warning text-white '.($data['status'] != 'purchase' ? 'disabled' : '').' " name="bkirim" style="width: 65px">Kirim</a>'
             ?>
             <br>
             <br>
             <?php
-            echo '<a href="beli.php?code='. $data['code'] .'" class="btn btn-primary text-white" name="bbeli" style="width: 65px">Beli</a>'
+            echo '<a href="beli.php?code='. $data['code'] .'" class="btn btn-primary text-white '.($data['status'] != 'request' ? 'disabled' : '').'" name="bbeli" style="width: 65px">Beli</a>'
             ?>
           </td>
   </tr>

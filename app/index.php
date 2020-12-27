@@ -1,6 +1,7 @@
 <?php include 'partials/header.php' ?>
 
 <?php
+session_start();
 if(!(isset($_SESSION["login"]))){
     echo "<script>window.location.href='login.php'</script>";
         exit;
