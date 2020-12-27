@@ -25,7 +25,7 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
   </div>
-  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+  <button type="submit" name="login" class="btn btn-primary btn-lg btn-block">Submit</button>
 </form>
 </div>
 </div>

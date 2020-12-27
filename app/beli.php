@@ -1,4 +1,13 @@
 <?php include 'partials/header.php' ?>
+<?php
+session_start();
+if(!(isset($_SESSION["login"]))){
+    echo "<script>window.location.href='login.php'</script>";
+        exit;
+}
+include './connection.php';
+?>
+
 
 <form action="proses_beli.php" method="post">
   <input name="transaction_code" type="text" value="<?= $_GET['code'] ?>" hidden />

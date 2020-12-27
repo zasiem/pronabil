@@ -1,5 +1,14 @@
 <?php include 'partials/header.php' ?>
 
+<?php
+session_start();
+if(!(isset($_SESSION["login"]))){
+    echo "<script>window.location.href='login.php'</script>";
+        exit;
+}
+include './connection.php';
+?>
+
 <!-- ngoding dibawah sini -->
 <div class="container p-5 text-center">
     <h1 class="text-center">Menu</h1>
