@@ -5,7 +5,7 @@
 
 $delete=mysqli_query($con, $query);
 if ($delete){
-	header('Location: vendor.php');
+	echo "<script>window.location.href='vendor.php'</script>";
 }else{
 	echo "gagal delete";
 }

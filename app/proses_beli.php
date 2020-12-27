@@ -33,4 +33,4 @@ $query = "UPDATE transactions SET
                 WHERE code = '$transaction_code'";
 mysqli_query($con, $query);
 
-header('Location: transaksi.php');
+echo "<script>window.location.href='transaksi.php'</script>";

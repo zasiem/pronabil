@@ -6,7 +6,7 @@
 
 $update=mysqli_query($con, $query);
 if ($update){
-	header('Location: transaksi.php');
+	echo "<script>window.location.href='transaksi.php'</script>";
 }else{
 	echo "gagal update";
 }

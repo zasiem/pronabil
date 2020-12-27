@@ -11,7 +11,7 @@ $query="UPDATE vendor_products SET vendor_id='$vendor_id', barang_id='$barang_id
 $hasil=mysqli_query($con, $query);
 
 if($hasil){
-	header('Location:vendor.php');
+	echo "<script>window.location.href='vendor.php'</script>";
 }else{
 	echo "update data gagal kang!";
 }

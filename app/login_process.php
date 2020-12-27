@@ -14,7 +14,7 @@ $response = post_login("https://penabil-api.herokuapp.com/api/login", $request);
 
 if ($response->status == "true"){
     $_SESSION["login"] = $response->token;
-    header('Location: index.php');    
+    echo "<script>window.location.href='index.php'</script>";    
 } else {
     echo 'Gagal Login';
     }

@@ -29,4 +29,4 @@ if (mysqli_fetch_assoc($result_query)['total'] <= 0) {
     mysqli_query($con, $query);
 }
 
-header('Location: good_receipt.php');
+echo "<script>window.location.href='good_receipt.php'</script>";

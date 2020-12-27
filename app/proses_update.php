@@ -13,7 +13,7 @@ $query="UPDATE vendors SET name='$Name', rating='$Rating', address='$address', p
 $hasil=mysqli_query($con, $query);
 
 if($hasil){
-	header('Location:vendor.php');
+	echo "<script>window.location.href='vendor.php'</script>";
 }else{
 	echo "update data gagal kang!";
 }
